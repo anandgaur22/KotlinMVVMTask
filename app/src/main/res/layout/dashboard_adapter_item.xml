@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/cardView"
+            app:cardCornerRadius="5dp"
+            android:elevation="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@+id/cardView"
+            android:textSize="14sp"
+            android:id="@+id/track"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/textViewStyle"/>
+
+        <TextView
+            app:layout_constraintLeft_toRightOf="@+id/cardView"
+            android:id="@+id/description"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/track"
+            android:textSize="12sp"
+            style="@style/textViewStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+
